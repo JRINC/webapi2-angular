@@ -3,18 +3,17 @@ namespace WebApi2_Angular4.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Initial : DbMigration
+    public partial class initial : DbMigration
     {
         public override void Up()
         {
             CreateTable(
-                "dbo.Employees",
+                "dbo.Users",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Firstname = c.String(nullable: false),
-                        Lastname = c.String(nullable: false),
-                        BirthDate = c.DateTime(nullable: false),
+                        Username = c.String(nullable: false),
+                        Password = c.String(nullable: false),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -22,7 +21,7 @@ namespace WebApi2_Angular4.Migrations
         
         public override void Down()
         {
-            DropTable("dbo.Employees");
+            DropTable("dbo.Users");
         }
     }
 }

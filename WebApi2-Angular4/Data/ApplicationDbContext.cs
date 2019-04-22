@@ -16,5 +16,7 @@ namespace WebApi2_Angular4.Data
         }
 
         public DbSet<Employee> Employees { get; set; }
+
+        public DbSet<User> Users { get; set; }
     }
 }
