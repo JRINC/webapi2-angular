@@ -1,3 +1,28 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<table class="table">
+				<thead>
+					<th>Name</th>
+					<th>Lastname</th>
+					<th>Birthdate</th>
+				</thead>
+				<tbody>
+					<tr *ngFor="let employee of employees">
+						<td>{{ employee.firstname }}</td>
+						<td>{{ employee.lastname }}</td>
+						<td>{{ employee.birthDate }}</td>
+						<td><button mat-raised-button color="primary" [routerLink]="['/employee-edit', employee.id]">Edit</button></td>
+					</tr>
+				</tbody>
+			</table>
+			<button mat-fab color="primary" [routerLink]="['/employee-add']">Add</button>
+		</div>
+	</div>
+</div>
+
+<!-- 
+
 <mat-card>
   <mat-card-header>Employees List</mat-card-header>
   <mat-card-content>
@@ -13,4 +38,4 @@
   </mat-card-content>
 
   <button mat-fab color="primary" [routerLink]="['/employee-add']">Add</button>
-</mat-card>
+</mat-card> -->
